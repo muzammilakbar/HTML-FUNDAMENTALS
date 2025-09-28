@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Muhammad Muzammil Lodhia — Resume (Semantic HTML)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Beginner CSS for readability; structure uses only semantic tags -->
+  <style>
+    :root { --primary:#003366; --accent:#006699; --ink:#222; --bg:#f5f8ff; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: Arial, sans-serif; }
+    header, nav, main, section, article, footer { max-width: 900px; margin: 0 auto; padding: 16px; }
+    header { text-align:center; background:var(--primary); color:#fff; padding:28px 16px; }
+    header h1 { margin:0; font-size: 28px; }
+    header h2 { margin:6px 0 0; font-size:18px; color:#cfe6ff; }
+    nav { background:#e8f1ff; border-left:4px solid var(--primary); }
+    nav ul { margin:8px 0 0; padding-left:20px; }
+    nav a { color:var(--primary); text-decoration:none; }
+    main h3 { color:var(--accent); border-bottom:2px solid var(--primary); padding-bottom:4px; margin-top:22px; }
+    article h4 { margin:0 0 6px; color:var(--primary); }
+    time { color:#555; }
+    footer { background:var(--primary); color:#fff; text-align:center; margin-top:24px; }
+    footer a { color:#cfe6ff; text-decoration:none; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER: your name + designation -->
+  <header>
+    <h1>Muhammad Muzammil Lodhia</h1>
+    <h2>Digital Blockchain Merchant | Front-End Developer</h2>
+  </header>
+
+  <!-- NAV: quick links to sections -->
+  <nav aria-label="Quick links">
+    <h3 style="margin:0; color:var(--primary);">Quick Links</h3>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#project">Project / Achievement</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN content wrapper (semantic) -->
+  <main>
+
+    <!-- SECTION: Education -->
+    <section id="education" aria-labelledby="edu-heading">
+      <h3 id="edu-heading">Education</h3>
+      <article>
+        <h4>Bahria University Karachi — BS Computer Science</h4>
+        <p>
+          <strong>Status:</strong> 6th Semester • <strong>CGPA:</strong> 3.01<br />
+          <time datetime="2023-02">Feb 2023</time> – Present
+        </p>
+      </article>
+
+      <article>
+        <h4>Bahria College Karsaz — HSC</h4>
+        <p>
+          <strong>Secured:</strong> 81.55%<br />
+          <time datetime="2020">2020</time> – <time datetime="2022">2022</time>
+        </p>
+      </article>
+    </section>
+
+    <!-- SECTION: Experience -->
+    <section id="experience" aria-labelledby="exp-heading">
+      <h3 id="exp-heading">Experience</h3>
+
+      <!-- Blockchain only -->
+      <article>
+        <h4>Blockchain & Digital Operations</h4>
+        <p><time datetime="2023-02">Feb 2023</time> – Present</p>
+        <ul>
+          <li>Handled basic crypto merchant workflows: wallet setup, transfers, and simple buy/sell flows.</li>
+          <li>Maintained records and followed risk notes (volatility limits, phishing awareness, seed safety).</li>
+          <li>Created short, beginner-friendly checklists to keep tasks consistent and efficient.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ARTICLE: Project or Achievement -->
+    <article id="project" aria-labelledby="proj-heading">
+      <h3 id="proj-heading">Project / Achievement</h3>
+      <h4>Crypto Merchant Ops Mini-Playbook</h4>
+      <p>
+        A concise, practical checklist for safe and efficient small-scale digital-asset activity:
+      </p>
+      <ul>
+        <li>Wallet setup & basic security (seed phrases, device hygiene, phishing awareness).</li>
+        <li>Simple buy/sell flows using reputable on/off-ramps with basic record-keeping.</li>
+        <li>Price-watch checklist and limits to manage volatility risk (not financial advice).</li>
+      </ul>
+    </article>
+
+  </main>
+
+  <!-- FOOTER: Contact info -->
+  <footer id="contact" aria-labelledby="contact-heading">
+    <h3 id="contact-heading" style="margin:0 0 6px;">Contact</h3>
+    <address>
+      <p><strong>Phone:</strong> <a href="tel:+9230926597777">0309-26597777</a></p>
+      <p><strong>Email:</strong> <a href="mailto:muzammillodhia88@gmail.com">muzammillodhia88@gmail.com</a></p>
+      <p><strong>Location:</strong> Karachi, Pakistan</p>
+    </address>
+    <p><small>© 2025 Muhammad Muzammil Lodhia</small></p>
+  </footer>
+
+</body>
+</html>

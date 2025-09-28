@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bahria University Karachi — Student Page</title>
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --ink: #17181c;
+      --muted: #8b90a0;
+      --brand: #0d47a1;
+      --line: #e6e8f0;
+      --head: #1f1f1f;
+      --nav: #333333;
+      --head-ink: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink)
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    /* Page table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .06)
+    }
+
+    thead th,
+    tfoot td {
+      padding: 0;
+      border: 0
+    }
+
+    tbody td {
+      vertical-align: top;
+      border-top: 1px solid var(--line)
+    }
+
+    .sidebar {
+      width: 300px;
+      padding: 18px;
+      background: #fff;
+      border-right: 1px solid var(--line)
+    }
+
+    .content {
+      padding: 26px
+    }
+
+    /* HEADER like screenshot */
+    .header-wrap {
+      background: var(--head);
+      padding: 46px 16px 28px;
+      text-align: center;
+      color: var(--head-ink);
+    }
+
+    .title {
+      margin: 0;
+      font-weight: 900;
+      font-size: 40px;
+      letter-spacing: .4px;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, .35)
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      font-size: 18px;
+      color: #d5d7dc
+    }
+
+    .nav-bar {
+      background: var(--nav);
+      border-top: 1px solid #2a2a2a;
+      border-bottom: 1px solid #2a2a2a
+    }
+
+    .nav-inner {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 10px
+    }
+
+    .nav-inner a {
+      color: #f2f2f2;
+      font-weight: 800
+    }
+
+    .nav-inner a:hover {
+      color: #ffffff
+    }
+
+    /* Left nav (sidebar) */
+    nav a {
+      display: block;
+      padding: 12px 14px;
+      margin: 8px 0;
+      border: 1px solid var(--line);
+      border-radius: 12px
+    }
+
+    nav a:hover {
+      border-color: var(--brand)
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #fff
+    }
+
+    .muted {
+      color: #606572
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 700;
+      border: 1px solid #0a3a86
+    }
+
+    .cta:hover {
+      filter: brightness(.97)
+    }
+
+    .hero {
+      display: grid;
+      gap: 14px
+    }
+
+    figure {
+      margin: 14px 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff
+    }
+
+    /* ↓ ADJUSTED SIZE FOR IMAGE ↓ */
+    figure img {
+      display: block;
+      max-height: 140px;
+      /* tweak this value */
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      padding: 10px 12px;
+      font-size: 14px;
+      color: #6b7080;
+      background: #f9fbff
+    }
+
+    details {
+      margin: 14px 0;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px
+    }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 8px
+    }
+
+    @media (max-width: 880px) {
+      .sidebar {
+        width: 240px
+      }
+
+      .kpi {
+        grid-template-columns: 1fr
+      }
+
+      .title {
+        font-size: 32px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table role="presentation" aria-label="Bahria University Karachi layout">
+    <thead>
+      <tr>
+        <th colspan="2" scope="colgroup">
+          <!-- Top header (screenshot style) -->
+          <div class="header-wrap">
+            <h1 class="title">Bahria University Karachi</h1>
+            <div class="subtitle">Knowledge • Character • Discipline</div>
+          </div>
+          <!-- Horizontal nav bar (purely visual; assignment still uses sidebar for real nav) -->
+          <div class="nav-bar">
+            <div class="nav-inner" aria-hidden="true">
+              <a>Home</a>
+              <a>Programs</a>
+              <a>Faculty</a>
+              <a>Admissions</a>
+              <a>Contact</a>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="sidebar" rowspan="2">
+          <nav aria-label="Primary">
+            <strong>Navigation</strong>
+            <a href="#notices">Notices</a>
+            <a href="#courses">My Courses</a>
+            <a href="#library">Library</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <section class="card" id="contact" style="margin-top:14px">
+            <h3 style="margin:0 0 6px">Campus Info</h3>
+            <div class="muted">
+              13 National Stadium Rd, Karachi<br />
+              Office Hours: <strong>09:00 – 05:00</strong><br />
+              Phone: <a href="tel:+9221111181000">021 111 18 1000</a>
+            </div>
+          </section>
+
+          <details open>
+            <summary>Student Help</summary>
+            <ul class="list">
+              <li>Reset LMS password</li>
+              <li>Request transcripts</li>
+              <li>Fee & scholarship queries</li>
+            </ul>
+          </details>
+        </td>
+
+        <td class="content" id="notices">
+          <section class="hero">
+            <h2 style="margin:0">Latest Notices</h2>
+            <ul class="list">
+              <li>Mid-term exam schedule published for all departments.</li>
+              <li>Library timings extended during exam week.</li>
+              <li>Career Fair registrations now open.</li>
+            </ul>
+
+            <figure id="library">
+              <img src="bahria-logo.png" alt="Bahria University Karachi emblem">
+              <figcaption>Bahria University Karachi — Official Logo</figcaption>
+            </figure>
+
+
+            <a class="cta" href="#courses">Go to My Courses</a>
+          </section>
+
+          <section class="kpi">
+            <div class="card">
+              <h3 style="margin:0 0 6px">Departments</h3>
+              <p class="muted">Engineering, CS, Management Sciences, Humanities.</p>
+            </div>
+            <div class="card">
+              <h3 style="margin:0 0 6px">Facilities</h3>
+              <p class="muted">Modern labs, digital library, sports complex.</p>
+            </div>
+            <div class="card">
+              <h3 style="margin:0 0 6px">Student Life</h3>
+              <p class="muted">Societies, events, competitions, and community work.</p>
+            </div>
+          </section>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="content" id="courses">
+          <h2 style="margin:0 0 10px">My Courses</h2>
+          <ul class="list">
+            <li>Web Application Development</li>
+            <li>Business Process Management</li>
+            <li>Data Management & Modeling</li>
+            <li>Entrepreneurship & Innovation</li>
+          </ul>
+
+          <details>
+            <summary>Academic Policy (Summary)</summary>
+            <p class="muted">Attendance ≥ 75%, plagiarism strictly prohibited, grading as per department rubric. For
+              full policy, see the official handbook.</p>
+          </details>
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="2">
+          <div
+            style="background:#1f1f1f; color:#e8e9ff; padding:14px 18px; display:flex; justify-content:space-between; align-items:center;">
+            <span>© 2025 Bahria University Karachi</span>
+            <span>www.bahria.edu.pk</span>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
